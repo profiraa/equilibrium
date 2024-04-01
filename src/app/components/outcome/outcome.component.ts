@@ -12,7 +12,7 @@ export class OutcomeComponent {
       category: 'Potential benefits',
       title: 'FOR SOCIETY: Improved access to mental health services',
       content:
-        "Technology can help more people get the help they need for their feelings and thoughts, especially those who live far away from hospitals or doctors. Teletherapy is a way to talk to someone who can help with mental health using video calls or phones. This way, people don't have to go to a hospital or office, which can be hard for some people who can't move easily or feel scared around lots of people.",
+        "Technology can help more people get the help they need for their feelings and thoughts, especially those who live far away from hospitals or doctors. Teletherapy is a way to talk to someone who can help with mental health using video calls or phones. This way, people don't have to go to a hospital or office, which can be difficult for some people who can't move easily or feel scared around lots of people.",
       image: 'assets/images/benefit1.jpg',
       link: 'https://www.forbes.com/sites/bernardmarr/2020/06/22/10-wonderful-examples-of-using-artificial-intelligence-ai-for-good/',
       link_text: '10 Examples of AI Benefits',
