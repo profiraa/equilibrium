@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: relative;
+}
+section {
+  margin-bottom: 40px !important;
+}
+section::before {
+  content: "";
+  background-image: url("/assets/images/strategy.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.3;
+}
+
+.title {
+  margin: 0;
+  margin-left: 5%;
+  margin-right: 5%;
+  z-index: 1;
+}
+.logo {
+  margin-top: 20px;
+  float: left;
+}
+h1 {
+  flex-wrap: wrap;
+  font-size: 400%;
+  color: #de6b6b;
+  z-index: 99;
+  padding-top: 40px;
+}
+
+/*accordion*/
+.accordion {
+  max-width: 1200px;
+  max-height: fit-content;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: transparent !important;
+  border: 1px solid #ccc;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.question {
+  position: relative;
+  margin: 20px;
+  background-color: transparent !important;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid #ccc;
+}
+input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: 0;
+}
+.accordion h3 {
+  background-color: transparent !important;
+  border: 1px solid white;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: rgb(56, 53, 53);
+  padding: 30px;
+  position: relative;
+}
+label::before {
+  content: "";
+  display: inline-block;
+  border: 15px solid transparent;
+  border-left: 20px solid white;
+}
+label {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 30px !important;
+}
+.answer {
+  max-height: fit-content;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+  background-color: white;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  padding-right: 10px;
+}
+.answer p {
+  padding: 2em;
+  font-size: 20px;
+  max-height: fit-content;
+}
+.answer ol,
+ul {
+  padding: 2em;
+  font-size: 20px;
+  max-height: fit-content;
+  max-width: 900px;
+  padding-right: 10px;
+}
+input:checked ~ h3 label::before {
+  border-left: 15px solid transparent;
+  border-top: 20px solid white;
+  margin-top: 12px;
+  margin-right: 20px;
+}
+input:checked ~ h3 ~ .answer {
+  max-height: 0px;
+}
+
+/*table*/
+table {
+  margin: 10px 20px 10px 20px;
+  padding: 20px;
+  border-collapse: collapse;
+  width: 1100px;
+  font-size: 20px;
+  border-style: none;
+}
+th {
+  text-align: center;
+  padding: 8px;
+  width: 50px;
+}
+td {
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+  margin: 10px 0px 20px 0 !important;
+}
+.image {
+  transition: transform 0.25s ease;
+}
+.image:hover {
+  -webkit-transform: scale(2.5);
+  transform: scale(2.5);
+  z-index: 3;
+  margin: auto;
+  position: relative;
+  display: block;
+}
+
+/*vertical flip*/
+body {
+  color: #555;
+  background: #222;
+  justify-content: center;
+  display: flex;
+
+align-items: center;
+  padding: 1em;
+}
+.flip .back {
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  left: 0px;
+ 
+}
+.flip .back:hover {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+.flip {
+  position: relative;
+  display: inline-block;
+  margin-right: 2px;
+  margin-bottom: 1em;
+  width: 450px;
+}
+.flip .front,
+.flip .back {
+  display: block;
+  color: white;
+  width: inherit;
+  background-size: cover !important;
+  background-position: center !important;
+  height: 450px;
+  font-size: 20px;
+  
+  margin: 8px;
+  background: #de6b6b;
+  border-radius: 10px;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 0.5s;
+  transition-property: transform, opacity;
+}
+

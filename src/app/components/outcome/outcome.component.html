@@ -1,0 +1,145 @@
+<section>
+  <div class="title fluid">
+    <a routerLink="/"
+      ><img
+        src="assets/images/logo.jpg"
+        class="logo fluid"
+        alt="logo"
+        style="width: 100px; height: 100px; border-radius: 10px"
+    /></a>
+    <h1>Equilibrium</h1>
+  </div>
+
+  <div class="container">
+    <h1
+      style="
+        text-transform: uppercase;
+        padding: 2%;
+        color: black;
+        text-align: center;
+        font-size: xx-large;
+        margin-top: 30px;
+      "
+    >
+      <b
+        >Possibilities and Potential Consequences of AI in Relation to the
+        Definition of Mental Privacy</b
+      >
+    </h1>
+    <p style="font-size: 15px; padding: 50px">
+      *Instances of AI-related issues have been observed over an extended
+      period, dating back to the early stages of AI development. These examples
+      underscore the persistent challenges in ensuring fairness, accuracy, and
+      ethical use of AI technologies throughout its history.
+    </p>
+
+    <div class="layout">
+      <div class="advantages">
+        <h1
+          style="
+            padding-bottom: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            color: green;
+          "
+        >
+          <b>Potential benefits</b>
+        </h1>
+        <div
+          *ngFor="let advantage of advantages; trackBy: trackByFn"
+          style="margin-bottom: 10%"
+        >
+          <!--trackBy -> new function for improving the performance-->
+          <div *ngIf="advantage.category === 'Potential benefits'">
+            <h2 style="color: rgb(30, 122, 30)">
+              <b>{{ advantage.title }}</b>
+            </h2>
+            <p>
+              <strong> &nbsp;&nbsp;&nbsp; {{ advantage.content }}</strong>
+            </p>
+            <a
+              target="_blank"
+              rel=""
+              href="{{ advantage.link }}"
+              style="font-size: 15px; padding: 20px"
+              >{{ advantage.link_text }}</a
+            ><br />
+            <img
+              [src]="advantage.image"
+              alt=""
+              style="
+                width: 400px;
+                height: auto;
+                border-radius: 50%;
+                margin-top: 40px;
+              "
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="disadvantages">
+        <h1
+          style="
+            padding-bottom: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            color: rgb(155, 3, 3);
+          "
+        >
+          <b>Potential negative consequences</b>
+        </h1>
+        <div
+          *ngFor="let disadvantage of disadvantages; trackBy: trackByFn"
+          style="margin-bottom: 10%"
+        >
+          <div
+            *ngIf="disadvantage.category === 'Potential negative consequences'"
+          >
+            <h2 style="color: rgb(155, 3, 3)" class="ideaTitle">
+              <b>{{ disadvantage.title }}</b>
+            </h2>
+            <p>
+              <strong> &nbsp;&nbsp;&nbsp; {{ disadvantage.content }}</strong>
+            </p>
+            <a
+              target="_blank"
+              rel=""
+              href="{{ disadvantage.link }}"
+              style="font-size: 15px; padding: 20px"
+              >{{ disadvantage.link_text }}</a
+            >
+            <img
+              [src]="disadvantage.image"
+              alt=""
+              style="
+                width: 400px;
+                height: auto;
+                border-radius: 50%;
+                margin-top: 40px;
+              "
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<button
+  class="goBack"
+  style="
+    font-size: 28px;
+    border-radius: 10px;
+    background-color: #de6b6b;
+    border-width: 4px;
+    float: right;
+    bottom: 50px;
+    right: 16px;
+  "
+  [routerLink]="['/']"
+>
+  <i class="bx bx-left-arrow-circle"></i>
+</button>
+
+<app-footer></app-footer>

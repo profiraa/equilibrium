@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: relative;
+  font-weight: 600;
+}
+section {
+  margin-bottom: 40px !important;
+}
+section::before {
+  content: "";
+  background-image: url("/assets/images/outcome.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.3;
+}
+.title {
+  margin: 0;
+  margin-left: 5%;
+  margin-right: 5%;
+  z-index: 1;
+}
+.logo {
+  margin-top: 20px;
+  float: left;
+}
+.title h1 {
+  flex-wrap: wrap;
+  font-size: 400%;
+  color: #de6b6b;
+  z-index: 99;
+  padding-top: 40px;
+}
+.container {
+  max-width: 2200px;
+  max-height: fit-content;
+  margin: auto;
+  padding: 20px;
+}
+.layout {
+  display: flex;
+  gap: 48px;
+  padding: 40px;
+}
+.advantages {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  flex: 1;
+  border: 1px solid rgb(30, 122, 30);
+  padding: 1rem 1rem;
+  z-index: 2;
+  border-radius: 10px;
+}
+.advantages h2 {
+  margin: 10px 0px 10px 10px !important;
+}
+.advantages p {
+  margin: 10px 0px 10px 10px !important;
+  font-size: 18px;
+}
+.disadvantages {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  flex: 1;
+  border: 1px solid rgb(155, 3, 3);
+  padding: 1rem 1rem;
+  z-index: 2;
+  border-radius: 10px;
+}
+.disadvantages h2 {
+  margin: 10px 0px 10px 10px !important;
+}
+.disadvantages p {
+  margin: 10px 0px 10px 10px !important;
+  font-size: 18px;
+}

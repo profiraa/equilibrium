@@ -1,0 +1,148 @@
+
+  body{
+    padding:0;
+    margin:0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  
+  /* 404 page */
+  .jc-elevator {
+  background: #de6b6b;
+  width: 650px;
+  height: 900px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-left: 4px solid #43464B;
+  border-right: 4px solid #43464B;
+  border-top: 4px solid #43464B;
+  border-bottom: 1px solid #43464B;
+  }
+  
+  .jc-floor {
+  position: relative;
+  top: 9%;
+  left: 40%;
+  background: #f8f8f8;
+  height: 50px;
+  width: 20%;
+  border: 2px solid #43464B;
+  }
+  
+  .jc-floor h1 {
+  color: #de6b6b;
+  /* center the text horizontally &vertically*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -15px 0 0 -25px;
+  }
+  
+  .jc-doors {
+  z-index: 1;
+  background: #ffffff;
+  width: 450px;
+  height: 750px;
+  position: absolute;
+  bottom: 0;
+  left: 12%;
+  overflow: hidden;
+  border-left: 4px solid #43464B;
+  border-right: 4px solid #43464B;
+  border-top: 4px solid #43464B;
+  background-image: url("/assets/images/404.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  }
+  
+  .jc-doors:before {
+  content: '';
+  background: #eaa5a5;
+  border-right: 2px solid #abb7b2;
+  width: 325px;
+  height: 900px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: left 1s linear .5s forwards;
+  }
+  
+  .jc-doors:after {
+  content: '';
+  background: #eaa5a5;
+  border-left: 2px solid #abb7b2;
+  width: 325px;
+  height: 900px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation: right 1s linear .5s forwards;
+  }
+  
+  .jc-doors div {
+  position: relative;
+  z-index: -1;
+  top: 20%;
+  color: white;
+  text-align: center;
+  line-height: 2;
+  }
+  
+  .jc-doors div:nth-child(1) {
+  font-size: 30px;
+  }
+  
+  .jc-doors div:nth-child(2) {
+  font-size: 12px;
+  }
+  
+  .jc-switch {
+  position: absolute;
+  background: #dadfe1;
+  top: 45%;
+  left: 89.1%;
+  height: 50px;
+  width: 30px;
+  border: 2px solid #abb7b7;
+  }
+  
+  .jc-switch a:nth-child(1) {
+  position: absolute;
+  top: 15%;
+  left: 12%;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #36b079;
+  }
+  
+  .jc-switch a:nth-child(2) {
+  content: '';
+  position: absolute;
+  bottom: 15%;
+  left: 12%;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #37b079;
+  }
+  
+  @keyframes left {
+  0% {
+  left: 0;
+  }
+  100% {
+  left: -88%;
+  }
+  }
+  
+  @keyframes right {
+  0% {
+  right: 0;
+  }
+  100% {
+  right: -88%;
+  }
+  }
