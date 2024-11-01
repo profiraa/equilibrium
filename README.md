@@ -1,5 +1,8 @@
 The app is NOT mobile responsive yet.
 
+# Live Demo
+
+https://ta-equilibrium.netlify.app/navbar 
 
 # Equilibrium
 
